@@ -1,0 +1,296 @@
+/* main style ******************************************************************** */
+
+.main {
+  display: flex;
+  padding: 2rem 5%;
+  height: 100vh;
+}
+
+
+
+/* main container ********************************************** */
+
+/* post_container -------------------------------------- */
+.post_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* user profile ---------------------------------------- */
+.user_profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+}
+._profile_pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5px 0;
+  border: 2px solid red;
+  border-radius: 100%;
+}
+
+._profile_pic img{
+  width: 50px;
+  height: 50px;
+}
+
+.name_time {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.time_dout {
+  display: flex;
+
+}
+
+.name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 3px 0 0 10px;
+}
+
+.dout {
+  margin: 0 5px 0 5px;
+}
+
+.user_location {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5px 0 0 10px;
+  font-size: 10px;
+}
+
+.right {
+  all: unset
+}
+
+
+.btn-grad {
+  background-image: linear-gradient(to right, #fc00ff 0%, #00dbde 51%, #fc00ff 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.btn {
+  background-image: linear-gradient(to right, #fc00ff 0%, #00dbde 51%, #fc00ff 100%);
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  box-shadow: 0 0 20px #eee;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* user post *********************************** */
+
+.user_post {
+  display: flex;
+  justify-content: center;
+}
+
+.user_post img {
+  width: 700px;
+  height: 265px;
+  border-radius: .5rem;
+}
+
+/* likes section ********************************* */
+
+.user_footer_section {
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  /* background-color: yellow; */
+  border-radius: .5rem;
+
+}
+
+.user_like_comments_share {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_likes_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_likes {
+  display: flex;
+  justify-content: center;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.user_likes i {
+  font-size: 1.5rem;
+}
+
+.likes_counts {
+  display: flex;
+  justify-content: left;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.likes_by {
+  margin: 0.2rem 0.2rem 0 0;
+}
+
+.post_title {
+  margin-left: 0.5rem;
+  /* margin-top: 0.5rem; */
+  font-size: 15px;
+  font-family: Poppins;
+  word-wrap: break-word
+}
+
+.post_title p {
+  margin-top: 0;
+}
+
+.user_profile_comments {
+  display: flex;
+  justify-content: left;
+  margin: 0 0 0 0.5rem;
+  font-size: .7rem;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.user_profile_comments:hover {
+  opacity: 1;
+}
+
+.user_comments {
+  margin: 0 0.2rem 0 0;
+  margin-top: 0;
+}
+
+/* comments style *************************** */
+.user_add_comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc;
+  /* padding-top: 10px; */
+  margin: 20px 0 0 0.5rem;
+  background: rgba(217, 217, 217, 0.31);
+  border-radius: 20px;
+}
+
+.user_add_comments textarea {
+  all: unset;
+  height: 25px;
+  flex: 1;
+  resize: none;
+  margin-left: .5rem;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 275;
+  word-wrap: break-word
+}
+
+.user_add_comments button {
+  background: rgba(217, 217, 217, 0.31);
+  /* padding: 5px 10px; */
+  font-size: 22px;
+  /* background-color: #3498db; */
+  /* color: white; */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 10px;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.user_add_comments button:hover {
+  opacity: 1;
+}
+
+
+
+.comments-section {
+  margin-top: 20px;
+  max-height: 20px; /* Set maximum height for the comment container */
+  overflow-y: auto; /* Add scroll when it exceeds the maximum height */
+}
+
+/* .show-more-button {
+  display: none;
+} */
+
+/* .show-more-button button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+} */
+
+/* .show-more-button button:hover {
+  background-color: #2980b9;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+.comments-section .comment {
+  margin-bottom: 10px;
+}
+
+.comments-section .comment .comment-text {
+  display: block;
+  margin-left: 10px;
+}

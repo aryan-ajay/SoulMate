@@ -1,0 +1,243 @@
+.left_sidebar {
+  flex: 1.2;
+  background-color: white;
+  /* width: 490px; */
+  border-radius: 0.5rem;
+  /*16px*/
+  margin-right: 0.5rem;
+  position: sticky; /* Fix the position */
+  top: 20rem; /* Stick to the top */
+  /* border: 1px solid black; */
+
+}
+
+.main_contant {
+  background-color: white;
+  flex: 2;
+  border-radius: 0.5rem;
+  /* border: 1px solid black; */
+  /*16px*/
+  overflow: auto;
+  margin: 0 4rem 0 4rem;
+}
+
+/* Change the color and width of the scrollbar */
+.main_contant::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+}
+
+
+.right_sider_bar {
+
+  flex: 1.2;
+  background-color: white;
+  width: 340px;
+  /* border: 1px solid black; */
+  border-radius: 0.5rem;
+  /*16px*/
+  margin-right: 0.5rem;
+}
+
+
+.nav {
+  width: 320px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  /*16px*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* padding: 1rem 0 1rem 1rem; */
+}
+
+.menu_name {
+  /* margin: 0.5rem 0 0.5 0.5rem; */
+  /* margin-left: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 1rem;
+  color: #fff;
+}
+
+.nav-option {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.menu_icon img {
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.menu_name a {
+  padding-left: .8rem;
+  text-decoration: none;
+  color: #000;
+  opacity: 1;
+  text-align: center;
+  font-size: 22px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word
+}
+
+/* add friends  ************************************* */
+
+.add_friend_section {
+  width: 320px;
+  height: 340px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  /*16px*/
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0 1rem 1rem; */
+
+}
+
+.add_friend_section h3 {
+  margin-top: 2px;
+  text-align: center;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+}
+
+
+.add_friend_profile {
+  /* position: relative; */
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+
+
+}
+
+.add_friend_profile_name_location {
+  display: flex;
+  justify-content: center;
+
+
+  /* margin: 0 1rem 0 1rem; */
+}
+
+.add_friend_profile_pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 5px 0.5rem;
+  border: 2px solid red;
+  border-radius: 100%;
+}
+.add_friend_profile_pic img{
+  width: 50px;
+  height: 50px;
+}
+
+.add_friend_name_location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3px 0 0 10px;
+}
+
+.add_friend_friend_name {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+
+.add_friend_friend_location {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: black;
+  font-size: 10px;
+  font-family: Poppins;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.location_icon {
+  display: flex;
+  justify-content: center;
+}
+
+.location_icon img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.library h3 {
+  margin: 5px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 12px 0 12px;
+  /* overflow: auto; */
+
+}
+
+.profile {
+  padding: 5px;
+  margin: 5px;
+  margin-left: 0.8rem;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px rgba(0, 0, 0, 0.50) solid
+}
