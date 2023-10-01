@@ -3,637 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/CSS/header.css" />
-    <link rel="stylesheet" href="./CSS/left_siderbar.css" />
-    <link rel="stylesheet" href="./CSS/main_post.css" />
-    <link rel="stylesheet" href="./CSS/right_sidebar.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="./image/logo_pic.png" alt="" />
-      </div>
-      <div class="search">
-        <input type="text" placeholder="Search on SoulMate..." />
-        <button><img src="./image/search.svg" alt="Search" /></button>
+        <img src="./login_page_header_images/logo_pic.png" alt="" />
       </div>
       <ul class="navlist">
-        <li>
-          <a href="#"><img src="./image/menu.svg" alt="Menu" /></a>
+          <a href="#"><img src="./login_page_header_images/college.svg" alt="College" /></a>
         </li>
         <li>
-          <a href="#"
-            ><img src="./image/notification.svg" alt="Notifications"
-          /></a>
+          <a href="#"><img src="./login_page_header_images/search.svg" alt="search" /></a>
         </li>
-        <li>
-          <a href="#"><img src="./image/college.svg" alt="College" /></a>
-        </li>
-
-        <div class="profile_pic">
-          <li>
-            <a href="#"><img src="./image/profile.svg" alt="Profile" /></a>
-          </li>
-        </div>
       </ul>
     </header>
+    
+      <div class="container">
+        <h1>Welcome</h1>
+        <div class="user_data">
+          <div class="section">
+            <input type="text" placeholder="Full Name">
+          </div>
+          <div class="section">
+            <input type="email" placeholder="Phone or email" />
+          </div>
+    
+          <div class="section">
+            <input type="text" id="username" placeholder="username" />
+          </div>
+    
+          <div class="section">
+            <input type="password" id="password" placeholder="password" />
+          </div>
+  
+          <div class="section">
+            <select id="category">
+              <option value="Select">Select your category</option>
+              <option value="college">College</option>
+              <option value="school">School</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
 
-    <!-- main section -------------------------------------------------------------------------->
-    <div class="main">
-      <div class="left_sidebar">
-        <div class="nav">
-          <div class="menu_name">
-            <div class="nav-option">
-              <div class="menu_icon">
-                <img src="./left menu_icons/home_icon.svg" alt="" />
+          <div class="section">
+            <div class="wrapper" id="college">
+              <div class="select-btn">
+                <span>Select School/College</span>
+                <!-- <i class="uil uil-angle-down"></i> -->
               </div>
-              <div class="menu_name">
-                <a href="#">HOME</a>
-              </div>
-            </div>
-            <div class="nav-option">
-              <div class="menu_icon">
-                <img src="./left menu_icons/icon _create.svg" alt="" />
-              </div>
-              <div class="menu_name">
-                <a href="#">CREATE</a>
-              </div>
-            </div>
-            <div class="nav-option">
-              <div class="menu_icon">
-                <img src="./left menu_icons/icon _messages 2.svg" alt="" />
-              </div>
-              <div class="menu_name">
-                <a href="#">MESSAGES</a>
-              </div>
-            </div>
-            <div class="nav-option">
-              <div class="menu_icon">
-                <img src="./left menu_icons/con _explore.svg" alt="" />
-              </div>
-              <div class="menu_name">
-                <a href="#">EXPLORE</a>
-              </div>
-            </div>
-            <div class="nav-option">
-              <div class="menu_icon">
-                <img src="./left menu_icons/icon _film reel.svg" alt="" />
-              </div>
-              <div class="menu_name">
-                <a href="#">SPOOL</a>
+              <div class="content">
+                <div class="search">
+                  <input spellcheck="false" type="text" placeholder="Search">
+                </div>
+                <ul class="options"></ul>
+                <p id="college-not-found">
+                  Oops! College not found. 
+                  <button onclick="addNewCollege()">Add College</button>
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="add_friend_section">
-          <h3>Add friend's</h3>
-          <div class="add_friend_profile_main">
-            <div class="add_friend_profile">
-              <div class="add_friend_profile_name_location">
-                <div class="circle_profile__pic">
-                  <div class="add_friend_profile_pic">
-                    <img src="./image/profile.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="add_friend_name_location">
-                  <div class="add_friend_friend_name">kajal Jha</div>
-                  <div class="add_friend_friend_location">Delhi</div>
-                </div>
-              </div>
-              <div class="location_icon">
-                <img src="./left menu_icons/icon _plus circle_.svg" alt="" />
-              </div>
-            </div>
-            <div class="add_friend_profile">
-              <div class="add_friend_profile_name_location">
-                <div class="circle_profile__pic">
-                  <div class="add_friend_profile_pic">
-                    <img src="./image/Ellipse 60.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="add_friend_name_location">
-                  <div class="add_friend_friend_name">Savita ji</div>
-                  <div class="add_friend_friend_location">Mumbai</div>
-                </div>
-              </div>
-              <div class="location_icon">
-                <img src="./left menu_icons/icon _plus circle_.svg" alt="" />
-              </div>
-            </div>
-            <div class="add_friend_profile">
-              <div class="add_friend_profile_name_location">
-                <div class="circle_profile__pic">
-                  <div class="add_friend_profile_pic">
-                    <img src="./image/Ellipse 60.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="add_friend_name_location">
-                  <div class="add_friend_friend_name">Priya ji</div>
-                  <div class="add_friend_friend_location">Bihar</div>
-                </div>
-              </div>
-              <div class="location_icon">
-                <img src="./left menu_icons/icon _plus circle_.svg" alt="" />
-              </div>
-            </div>
-            <div class="add_friend_profile">
-              <div class="add_friend_profile_name_location">
-                <div class="circle_profile__pic">
-                  <div class="add_friend_profile_pic">
-                    <img src="./image/Ellipse 60.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="add_friend_name_location">
-                  <div class="add_friend_friend_name">Monto bhai</div>
-                  <div class="add_friend_friend_location">UP</div>
-                </div>
-              </div>
-              <div class="location_icon">
-                <img src="./left menu_icons/icon _plus circle_.svg" alt="" />
-              </div>
+        <div class="tarm_condation">
+          <div class="term">
+            Here, an authentic verification with a face recognition,
+            thats help us to identify are you Male or Female.
+          </div>
+          <div class="condations">
+            <div class="toggle-pill-color">
+              <input type="checkbox" id="pill3" name="check">
+              <label for="pill3"></label>
             </div>
           </div>
         </div>
-      </div>
-      <!-- main containt ---------------------------------------------------------------------------------------------- -->
-      <div class="main_contant">
-        <div class="post_container">
-          <!-- user container --------------------------------- -->
-          <div class="user_profile">
-            <div class="left">
-              <div class="_profile_pic">
-                <img src="./image/profile.svg" alt="" />
-              </div>
-              <div class="name_time">
-                <div class="name">
-                  <div class="_user_name">Juli</div>
-                  <div class="dout">•</div>
-                  <div class="time">1h</div>
-                </div>
-                <div class="user_location">AVIT - Chennai</div>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn">Follow</button>
-            </div>
-          </div>
-          <div class="user_post">
-            <img src="./main_section_image/user_photo.png" alt="user-post" />
-          </div>
-          <div class="user_footer_section">
-            <div class="user_like_comments_share">
-              <div class="user_likes_section">
-                <div class="user_likes">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-solid fa-comment-dots"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-              <div class="user_likes">
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="likes_counts">
-              <div class="likes_by">Liked by kajal</div>
-              <div class="likes_by">and</div>
-              <div class="likes_by" id="likeCount">57</div>
-              <div class="likes_by">others</div>
-            </div>
-            <div class="post_title">
-              <p>Yesterday party with awsome friends</p>
-            </div>
-            <div class="user_profile_comments">
-              <div class="user_comments">View all</div>
-              <div class="user_comments">1050</div>
-              <div class="user_comments">comments</div>
-            </div>
-            <div class="comments_containers">
-              <div class="user_add_comments">
-                <textarea id="commentInput" placeholder="Add a comment" oninput="togglePostButton()" onkeypress="addCommentOnEnter(event)"></textarea>
-                <button id="postButton" onclick="addComment()" style="display: none;">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div class="comments-section">
-                <div id="commentContainer">
-                  <!-- Comments will appear here -->
-                </div>
-              </div>
-              <!-- <div class="show-more-button" id="showMoreButton">
-                <button onclick="showMoreComments()">Show more</button>
-              </div> -->
-            </div> <hr>
-          </div>
+        <div class="sinup_button">
+          <a href="#" onclick="checkForm()" class="disabled">Sign up</a>
         </div>
-
-        <div class="post_container">
-          <!-- user container --------------------------------- -->
-          <div class="user_profile">
-            <div class="left">
-              <div class="_profile_pic">
-                <img src="./image/Ellipse 60.svg" alt="" />
-              </div>
-              <div class="name_time">
-                <div class="name">
-                  <div class="_user_name">Juli</div>
-                  <div class="dout">•</div>
-                  <div class="time">1h</div>
-                </div>
-                <div class="user_location">AVIT - Chennai</div>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn">Follow</button>
-            </div>
-          </div>
-          <div class="user_post">
-            <img src="./main_section_image/virat 1.webp" alt="user-post" />
-          </div>
-          <div class="user_footer_section">
-            <div class="user_like_comments_share">
-              <div class="user_likes_section">
-                <div class="user_likes">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-solid fa-comment-dots"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-              <div class="user_likes">
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="likes_counts">
-              <div class="likes_by">Liked by kajal</div>
-              <div class="likes_by">and</div>
-              <div class="likes_by" id="likeCount">57</div>
-              <div class="likes_by">others</div>
-            </div>
-            <div class="post_title">
-              <p>Yesterday party with awsome friends</p>
-            </div>
-            <div class="user_profile_comments">
-              <div class="user_comments">View all</div>
-              <div class="user_comments">1050</div>
-              <div class="user_comments">comments</div>
-            </div>
-            <div class="comments_containers">
-              <div class="user_add_comments">
-                <textarea id="commentInput" placeholder="Add a comment" oninput="togglePostButton()" onkeypress="addCommentOnEnter(event)"></textarea>
-                <button id="postButton" onclick="addComment()" style="display: none;">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div class="comments-section">
-                <div id="commentContainer">
-                  <!-- Comments will appear here -->
-                </div>
-              </div>
-              <!-- <div class="show-more-button" id="showMoreButton">
-                <button onclick="showMoreComments()">Show more</button>
-              </div> -->
-            </div> <hr>
-          </div>
-        </div>
-
-
-        <div class="post_container">
-          <!-- user container --------------------------------- -->
-          <div class="user_profile">
-            <div class="left">
-              <div class="_profile_pic">
-                <img src="./image/Ellipse 60.svg" alt="" />
-              </div>
-              <div class="name_time">
-                <div class="name">
-                  <div class="_user_name">Juli</div>
-                  <div class="dout">•</div>
-                  <div class="time">1h</div>
-                </div>
-                <div class="user_location">AVIT - Chennai</div>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn">Follow</button>
-            </div>
-          </div>
-          <div class="user_post">
-            <img src="./main_section_image/Rectangle 93.png" alt="user-post" />
-          </div>
-          <div class="user_footer_section">
-            <div class="user_like_comments_share">
-              <div class="user_likes_section">
-                <div class="user_likes">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-solid fa-comment-dots"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-              <div class="user_likes">
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="likes_counts">
-              <div class="likes_by">Liked by kajal</div>
-              <div class="likes_by">and</div>
-              <div class="likes_by" id="likeCount">57</div>
-              <div class="likes_by">others</div>
-            </div>
-            <div class="post_title">
-              <p>Yesterday party with awsome friends</p>
-            </div>
-            <div class="user_profile_comments">
-              <div class="user_comments">View all</div>
-              <div class="user_comments">1050</div>
-              <div class="user_comments">comments</div>
-            </div>
-            <div class="comments_containers">
-              <div class="user_add_comments">
-                <textarea id="commentInput" placeholder="Add a comment" oninput="togglePostButton()" onkeypress="addCommentOnEnter(event)"></textarea>
-                <button id="postButton" onclick="addComment()" style="display: none;">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div class="comments-section">
-                <div id="commentContainer">
-                  <!-- Comments will appear here -->
-                </div>
-              </div>
-              <!-- <div class="show-more-button" id="showMoreButton">
-                <button onclick="showMoreComments()">Show more</button>
-              </div> -->
-            </div> <hr>
-          </div>
-        </div>
-
-        <div class="post_container">
-          <!-- user container --------------------------------- -->
-          <div class="user_profile">
-            <div class="left">
-              <div class="_profile_pic">
-                <img src="./image/profile.svg" alt="" />
-              </div>
-              <div class="name_time">
-                <div class="name">
-                  <div class="_user_name">Juli</div>
-                  <div class="dout">•</div>
-                  <div class="time">1h</div>
-                </div>
-                <div class="user_location">AVIT - Chennai</div>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn">Follow</button>
-            </div>
-          </div>
-          <div class="user_post">
-            <img src="./main_section_image/virat 1.jpg" alt="user-post" />
-          </div>
-          <div class="user_footer_section">
-            <div class="user_like_comments_share">
-              <div class="user_likes_section">
-                <div class="user_likes">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-solid fa-comment-dots"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-              <div class="user_likes">
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="likes_counts">
-              <div class="likes_by">Liked by kajal</div>
-              <div class="likes_by">and</div>
-              <div class="likes_by" id="likeCount">57</div>
-              <div class="likes_by">others</div>
-            </div>
-            <div class="post_title">
-              <p>Yesterday party with awsome friends</p>
-            </div>
-            <div class="user_profile_comments">
-              <div class="user_comments">View all</div>
-              <div class="user_comments">1050</div>
-              <div class="user_comments">comments</div>
-            </div>
-            <div class="comments_containers">
-              <div class="user_add_comments">
-                <textarea id="commentInput" placeholder="Add a comment" oninput="togglePostButton()" onkeypress="addCommentOnEnter(event)"></textarea>
-                <button id="postButton" onclick="addComment()" style="display: none;">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div class="comments-section">
-                <div id="commentContainer">
-                  <!-- Comments will appear here -->
-                </div>
-              </div>
-              <!-- <div class="show-more-button" id="showMoreButton">
-                <button onclick="showMoreComments()">Show more</button>
-              </div> -->
-            </div> <hr>
-          </div>
-        </div>
-
-        <div class="post_container">
-          <!-- user container --------------------------------- -->
-          <div class="user_profile">
-            <div class="left">
-              <div class="_profile_pic">
-                <img src="./image/profile.svg" alt="" />
-              </div>
-              <div class="name_time">
-                <div class="name">
-                  <div class="_user_name">Juli</div>
-                  <div class="dout">•</div>
-                  <div class="time">1h</div>
-                </div>
-                <div class="user_location">AVIT - Chennai</div>
-              </div>
-            </div>
-            <div class="right">
-              <button class="btn">Follow</button>
-            </div>
-          </div>
-          <div class="user_post">
-            <img src="./main_section_image/Rectangle 25.png" alt="user-post" />
-          </div>
-          <div class="user_footer_section">
-            <div class="user_like_comments_share">
-              <div class="user_likes_section">
-                <div class="user_likes">
-                  <i class="fa-regular fa-thumbs-up"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-solid fa-comment-dots"></i>
-                </div>
-                <div class="user_likes">
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-              <div class="user_likes">
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="likes_counts">
-              <div class="likes_by">Liked by kajal</div>
-              <div class="likes_by">and</div>
-              <div class="likes_by" id="likeCount">57</div>
-              <div class="likes_by">others</div>
-            </div>
-            <div class="post_title">
-              <p>Yesterday party with awsome friends</p>
-            </div>
-            <div class="user_profile_comments">
-              <div class="user_comments">View all</div>
-              <div class="user_comments">1050</div>
-              <div class="user_comments">comments</div>
-            </div>
-            <div class="comments_containers">
-              <div class="user_add_comments">
-                <textarea id="commentInput" placeholder="Add a comment" oninput="togglePostButton()" onkeypress="addCommentOnEnter(event)"></textarea>
-                <button id="postButton" onclick="addComment()" style="display: none;">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div class="comments-section">
-                <div id="commentContainer">
-                  <!-- Comments will appear here -->
-                </div>
-              </div>
-              <!-- <div class="show-more-button" id="showMoreButton">
-                <button onclick="showMoreComments()">Show more</button>
-              </div> -->
-            </div> <hr>
+        <div class="line"><hr></div>
+        <div class="login">
+          <div class="paragraph">If you have an account!</div>
+          <div class="log_in">
+            <a href="#">Log in</a>
           </div>
         </div>
       </div>
 
-      <!-- Right sider bar------------------------------------------------------- -->
-      <div class="right_sider_bar">
-        <div class="online_friend_section">
-          <h3>Online Friend's</h3>
-          <div class="online_profile_main">
-            <div class="online_friend_profile">
-              <div class="online_profile_name_message">
-                <div class="profile__pic">
-                  <div class="online_profile_pic">
-                    <img src="./right_section_image/Ellipse 49.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="online_name_message">
-                  <div class="online_friend_name">SEEMA</div>
-                  <div class="online_friend_message">kaha ho?</div>
-                </div>
-              </div>
-              <div class="message_icon">
-                <img src="./right_section_image/icon _messages 2.svg" alt="" />
-              </div>
-            </div>
-            <div class="online_friend_profile">
-              <div class="online_profile_name_message">
-                <div class="profile__pic">
-                  <div class="online_profile_pic">
-                    <img src="./right_section_image/Ellipse 61.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="online_name_message">
-                  <div class="online_friend_name">JOE</div>
-                  <div class="online_friend_message">Hii, how are you?</div>
-                </div>
-              </div>
-              <div class="message_icon">
-                <img src="./right_section_image/icon _messages 2.svg" alt="" />
-              </div>
-            </div>
-            <div class="online_friend_profile">
-              <div class="online_profile_name_message">
-                <div class="profile__pic">
-                  <div class="online_profile_pic">
-                    <img src="./image/profile.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="online_name_message">
-                  <div class="online_friend_name">kajal Jha</div>
-                  <div class="online_friend_message">Hii, how are you?</div>
-                </div>
-              </div>
-              <div class="message_icon">
-                <img src="./right_section_image/icon _messages 2.svg" alt="" />
-              </div>
-            </div>
-            <div class="online_friend_profile">
-              <div class="online_profile_name_message">
-                <div class="profile__pic">
-                  <div class="online_profile_pic">
-                    <img src="./image/Ellipse 60.svg" alt="profile-photo" />
-                  </div>
-                </div>
-                <div class="online_name_message">
-                  <div class="online_friend_name">kajal Jha</div>
-                  <div class="online_friend_message">Hii, how are you?</div>
-                </div>
-              </div>
-              <div class="message_icon">
-                <img src="./right_section_image/icon _messages 2.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- collage activities--------------------------------------------------- -->
 
-        <div class="college_activities">
-          <h3>College Activities</h3>
-          <div class="college_container">
-            <div class="college_name_date">
-              <div class="college_name">TIVA Club event</div>
-              <div class="hayfin">-</div>
-              <div class="date_time">2th Sep 2023</div>
-            </div>
-            <div class="college_name_date">
-              <div class="college_name">Fine arts event</div>
-              <div class="hayfin">-</div>
-              <div class="date_time">10th Sep 2023</div>
-            </div>
-            <div class="college_name_date">
-              <div class="college_name">Internship Day</div>
-              <div class="hayfin">-</div>
-              <div class="date_time">18th Sep 2023</div>
-            </div>
-            <div class="college_name_date">
-              <div class="college_name">Placement Day</div>
-              <div class="hayfin">-</div>
-              <div class="date_time">26th Sep 2023</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <script src="app.js"></script>
+
+
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="app.js"></script>
   </body>
 </html>

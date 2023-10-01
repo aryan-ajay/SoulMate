@@ -1,67 +1,90 @@
-let likeCount = 0; // Initial like count
+function checkForm() {
+  var fullName = document.querySelector('input[placeholder="Full Name"]').value;
+  var phoneOrEmail = document.querySelector('input[placeholder="Phone or email"]').value;
+  var username = document.querySelector('#username').value;
+  var password = document.querySelector('#password').value;
+  var category = document.querySelector('#category').value;
+  var college = document.querySelector('#college .select-btn span').innerText.trim();
+  var check = document.querySelector('#pill3');
 
-document.querySelectorAll(".user_likes").forEach((likeButton) => {
-  likeButton.addEventListener("click", () => {
-    const likesCounts = document.querySelector(".likes_counts");
-    likesCounts.style.display =
-      likesCounts.style.display === "none" || likesCounts.style.display === ""
-        ? "flex"
-        : "none";
+  var searchResults = document.querySelectorAll('#college .options li');
+  var collegeNotFoundMessage = document.getElementById('college-not-found');
 
-    if (likesCounts.style.display === "flex") {
-      likeCount += 1;
-    } else {
-      likeCount -= 1;
-    }
+  var signupButton = document.querySelector('.sinup_button a');
 
-    document.getElementById("likeCount").textContent = likeCount;
-  });
+  
+
+  if (check.checked && fullName && phoneOrEmail && username && password && category !== 'Select' && college !== 'Select School/College') {
+    signupButton.classList.remove('disabled');
+  } else {
+    signupButton.classList.add('disabled');
+  }
+
+  // new college add button ***********************
+  if (searchResults.length === 0) {
+    collegeNotFoundMessage.style.display = 'block';
+  } else {
+    collegeNotFoundMessage.style.display = 'none';
+  }
+}
+
+// this function is add new college 
+function addNewCollege() {
+  // Handle adding a new college here
+  // You can implement the logic to add a new college based on your requirements
+}
+
+// Call checkForm whenever a form input changes
+var formInputs = document.querySelectorAll('input, select');
+formInputs.forEach(function(input) {
+  input.addEventListener('input', checkForm);
 });
 
-// comment area ******************************************************
 
-function togglePostButton() {
-  const commentInput = document.getElementById("commentInput").value.trim();
-  const postButton = document.getElementById("postButton");
+// search school and collehe ****************
+const wrapper = document.querySelector(".wrapper");
+const selectBtn = wrapper.querySelector(".select-btn");
+const searchInp = wrapper.querySelector("input");
+const options = wrapper.querySelector(".options");
 
-  if (commentInput !== "") {
-    postButton.style.display = "block"; // Show the button if there's input
-  } else {
-    postButton.style.display = "none"; // Hide the button if input is empty
-  }
+let countries = [
+  "Indian Institute of Technology Bombay (IITB)", "Indian Institute of Science (IISC)",
+  "Indian Institute of Technology Kharagpur (IITKGP)", 
+  "Indian Institute of Technology Madras (IITM)", 
+  "Indian Institute of Technology Delhi (IITD)",
+  "AVIT"
+];
+
+function addCollege(selectedCollege) {
+  options.innerHTML = "";
+  countries.forEach(College => {
+    let isSelected = College === selectedCollege ? "selected" : "";
+    let li = `<li onclick="updateName(this)" class="${isSelected}">${College}</li>`;
+    options.insertAdjacentHTML("beforeend", li);
+  });
+}
+addCollege();
+
+function updateName(selectedLi) {
+  searchInp.value = "";
+  addCollege(selectedLi.innerText);
+  wrapper.classList.remove("active");
+  selectBtn.firstElementChild.innerText = selectedLi.innerText;
 }
 
-function addCommentOnEnter(event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // Prevent the default behavior of the Enter key
-    addComment(); 
-  }
-}
+searchInp.addEventListener("keyup", () => {
+  let arr = [];
+  let searchWord = searchInp.value.toLowerCase();
+  arr = countries.filter(data => {
+    return data.toLowerCase().startsWith(searchWord);
+  }).map(data => {
+    let isSelected = data === selectBtn.firstElementChild.innerText ? "selected" : "";
+    return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+  }).join("");
+  options.innerHTML = arr ? arr : ``;
+});
 
-function addComment() {
-  const commentInput = document.getElementById("commentInput").value.trim();
-  if (commentInput !== "") {
-    const commentContainer = document.getElementById("commentContainer");
-    const newComment = document.createElement("div");
-    newComment.classList.add("comment");
-    newComment.innerHTML = `
-        <span class="comment-text">${commentInput}</span>
-      `;
-    commentContainer.appendChild(newComment);
-    document.getElementById("commentInput").value = "";
-    document.getElementById("postButton").style.display = "none"; // Hide the button after posting comment
+selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
-    // Check if the comment container is full and show "Show more" button
-    if (commentContainer.scrollHeight > 200) {
-      const showMoreButton = document.getElementById("showMoreButton");
-      showMoreButton.style.display = "block";
-    }
-  }
-}
 
-function showMoreComments() {
-  const commentContainer = document.getElementById("commentContainer");
-  commentContainer.style.maxHeight = "none"; // Remove max height to show all comments
-  const showMoreButton = document.getElementById("showMoreButton");
-  showMoreButton.style.display = "none"; // Hide the "Show more" button
-}
+

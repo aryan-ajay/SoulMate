@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(113deg, #A555EC 0%, #FED049 100%);
+  height: 100vh;
+}
+
+/* Change the color and width of the scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Color of the scrollbar thumb */
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.navlist {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navlist li {
+  margin-left: 10px;
+}
+
+.navlist img {
+  width: 25px;
+  margin-right: 0.5rem;
+}
+
+/* user data ************************************************ */
+
+
+
+
+/* Apply styles to the container */
+.container {
+  margin: 4.5rem auto;
+  padding: 0 20px 0 20px;
+  font-family: Arial, sans-serif;
+  max-width: 350px;
+  height: 500px;
+  background: #F5F4C9;
+  border-radius: 5px;
+}
+
+
+
+
+.container h1 {
+  text-align: center;
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+}
+
+
+.user_data {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 20px; */
+  /* border: 1px solid black; */
+}
+
+.section input {
+  all: unset;
+}
+
+.section {
+  margin-bottom: 10px;
+  flex: 1;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.section input,
+.section select {
+  all: unset;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.tarm_condation {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 20px; */
+}
+
+.term {
+  font-size: .7rem;
+  margin-bottom: 10px;
+
+}
+
+/* toggle-pill-color */
+
+.toggle-pill-color {
+  display: flex;
+  margin: 0 1rem 0 0;
+}
+
+.toggle-pill-color input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-pill-color input[type="checkbox"]+label {
+  display: block;
+  position: relative;
+  width: 2.9em;
+  height: 1.5em;
+  margin-bottom: 2px;
+  border-radius: 1em;
+  background: #e84d4d;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.toggle-pill-color input[type="checkbox"]+label:before {
+  content: "";
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-pill-color input[type="checkbox"]:checked+label {
+  background: #47cf73;
+}
+
+.toggle-pill-color input[type="checkbox"]:checked+label:before {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1.6em;
+}
+
+/* toggle-pill-color end */
+
+.sinup_button a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.sinup_button a.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+}
+
+.sinup_button a:hover {
+  background-color: #45a049;
+}
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.log_in a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin: 0 0 0 0.5rem;
+}
+
+.log_in a:hover {
+  text-decoration: underline;
+}
+
+
+.line hr {
+  border: 1rem;
+  height: 1px;
+  background: #ccc;
+  margin: 15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+::selection {
+  color: #fff;
+  background: #4285f4;
+}
+
+.select-btn,
+li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-btn {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 17px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn i {
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+
+.wrapper.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+
+.content {
+  display: none;
+  padding: 2px;
+  /* margin-top: 15px; */
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  /* Change to absolute positioning */
+  width: 23.5%;
+  /* Make the dropdown full width */
+  z-index: 1;
+  /* Ensure it appears on top of other elements */
+  top: 70%;
+  /* Position below the "Select Country" button */
+}
+
+
+.wrapper.active .content {
+  display: block;
+}
+
+.content .search {
+  position: relative;
+}
+
+
+
+.search input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+  border: 1px solid #B3B3B3;
+  
+}
+
+.search input:focus {
+  padding-left: 10px;
+  border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+  color: #bfbfbf;
+}
+
+.content .options {
+  margin-top: 5px;
+  max-height: 140px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+
+.options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+.options{
+  margin-left: 0;
+}
+
+.options li {
+  height: 50px;
+  /* padding: 0 1px; */
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.options li:hover,
+li.selected {
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+/* CSS for the "Oops! College not found" message and "Add College" button */
+#college-not-found {
+  margin-top: 10px;
+  color: red;
+  margin-left: 1.7rem;
+}
+
+#college-not-found button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+#college-not-found button:hover {
+  background-color: #2980b9;
+}
+
+#college-not-found button:focus {
+  outline: none;
+}
+
+
+
