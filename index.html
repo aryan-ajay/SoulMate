@@ -62,7 +62,7 @@
                 <ul class="options"></ul>
                 <p id="college-not-found">
                   Oops! College not found. 
-                  <button onclick="addNewCollege()">Add College</button>
+                  <button onclick="openPopup()">Add College</button>
                 </p>
               </div>
             </div>
@@ -92,24 +92,20 @@
         </div>
       </div>
 
-
-
-
-
-      
-  
-
-
-
-
-
-
-
-
-
-
-
-
+      <!-- popup code ------------------------------------------------- -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Add College</h2>
+          <label for="collegeName">College Name:</label>
+          <input type="text" id="collegeName" placeholder="Enter college name">
+    
+          <label for="city">City:</label>
+          <input type="text" id="city" placeholder="Enter city">
+    
+          <button onclick="saveCollege()">Save</button>
+        </div>
+      </div>
       <script src="app.js"></script>
   </body>
 </html>

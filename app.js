@@ -88,3 +88,23 @@ selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 
 
 
+
+function openPopup() {
+  document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+function saveCollege() {
+  const collegeName = document.getElementById('collegeName').value;
+  const city = document.getElementById('city').value;
+
+  // Handle saving the college details (you can customize this part)
+  console.log('College Name:', collegeName);
+  console.log('City:', city);
+
+  // Close the popup
+  closePopup();
+}
